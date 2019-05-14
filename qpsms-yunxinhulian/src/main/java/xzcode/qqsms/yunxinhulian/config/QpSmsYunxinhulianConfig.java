@@ -2,9 +2,10 @@ package xzcode.qqsms.yunxinhulian.config;
 
 public class QpSmsYunxinhulianConfig {
 	
-	private String apiUrl = "http://47.100.188.160:7862/sms";
-	private String apiPassword = "34GJEY";
-	private String apiCode = "10690319";
+	private String apiUrl;
+	private String account;
+	private String password;
+	private String extno;
 	
 	public String getApiUrl() {
 		return apiUrl;
@@ -12,19 +13,23 @@ public class QpSmsYunxinhulianConfig {
 	public void setApiUrl(String apiUrl) {
 		this.apiUrl = apiUrl;
 	}
-	public String getApiPassword() {
-		return apiPassword;
+	public String getAccount() {
+		return account;
 	}
-	public void setApiPassword(String apiPassword) {
-		this.apiPassword = apiPassword;
+	public void setAccount(String account) {
+		this.account = account;
 	}
-	public String getApiCode() {
-		return apiCode;
+	public String getExtno() {
+		return extno;
 	}
-	public void setApiCode(String apiCode) {
-		this.apiCode = apiCode;
+	public void setExtno(String extno) {
+		this.extno = extno;
 	}
-	
-	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	
 }

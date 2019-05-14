@@ -27,6 +27,11 @@ public class QpSmsYunxinhulianSpirngbootAutoConfiguration implements Application
     
     @ConfigurationProperties(prefix = PROPERTIES_PREFIX)
     @Bean
+    public QpSmsYunxinhulianService qpSmsYunxinhulianService() {
+    	return new QpSmsYunxinhulianService(qpSmsYunxinhulianConfig());
+    }
+    @ConfigurationProperties(prefix = PROPERTIES_PREFIX)
+    @Bean
     public QpSmsYunxinhulianConfig qpSmsYunxinhulianConfig() {
     	return new QpSmsYunxinhulianConfig();
     }
