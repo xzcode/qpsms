@@ -6,6 +6,7 @@ public class QpSmsYunxinhulianConfig {
 	private String account;
 	private String password;
 	private String extno;
+	private String signName;
 	
 	public String getApiUrl() {
 		return apiUrl;
@@ -30,6 +31,12 @@ public class QpSmsYunxinhulianConfig {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getSignName() {
+		return signName;
+	}
+	public void setSignName(String signName) {
+		this.signName = signName;
 	}
 	
 }

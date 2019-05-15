@@ -23,26 +23,21 @@ public class QpSmsYunxinhulianService {
 
 
 
-	public void send(String content, String mobiles) {
-		/*QpSmsYxhlSendSmsReq req = new QpSmsYxhlSendSmsReq();
-		req.setAccount(config.getAccount());
-		req.setMobile(mobiles);
-		req.setPassword(config.getPassword());
-		req.setExtno(config.getExtno());
-		req.setContent(content);*/
+	public QpSmsYxhlSendResp send(String content, String mobiles) {
 		Map<String, Object> formParams = new LinkedHashMap<String, Object>();
 		formParams.put("account", config.getAccount());
 		formParams.put("mobile", mobiles);
-		formParams.put("content", content);
+		formParams.put("content", config.getSignName() + content);
 		formParams.put("password", config.getPassword());
 		formParams.put("extno", config.getExtno());
 		formParams.put("action", "send");
 		formParams.put("rt", "json");
 		try {
-			httpUtil.postFormForJsonObject(config.getApiUrl(), formParams, QpSmsYxhlSendResp.class);
+			return httpUtil.postFormForJsonObject(config.getApiUrl(), formParams, QpSmsYxhlSendResp.class);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 	
 }

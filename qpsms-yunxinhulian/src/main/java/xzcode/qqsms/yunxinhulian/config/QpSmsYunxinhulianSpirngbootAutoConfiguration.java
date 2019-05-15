@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import xzcode.qqsms.yunxinhulian.QpSmsYunxinhulianService;
 
 @Configuration
-@ConditionalOnProperty(value = QpSmsYunxinhulianSpirngbootAutoConfiguration.PROPERTIES_PREFIX)
+@ConditionalOnProperty(prefix = QpSmsYunxinhulianSpirngbootAutoConfiguration.PROPERTIES_PREFIX, name = "enabled", havingValue = "true")
 @ConditionalOnMissingBean(value = QpSmsYunxinhulianService.class)
 public class QpSmsYunxinhulianSpirngbootAutoConfiguration implements ApplicationContextAware {
 
